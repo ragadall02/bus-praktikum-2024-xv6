@@ -39,12 +39,17 @@ Geben Sie die folgenden Kommandos ein um das System für die Nutzung von xv6 ein
     TOOLPREFIX=riscv64-elf- make qemu
 
 
-## xv6 Quellcode von Github beziehen
-Für die Bearbeitung der Praktikumsaufgaben müssen Sie zunächst den Quellcode des xv6-Betriebssystems von Github beziehen. Erstellen Sie sich hierzu zunächst ein eigenes Repository über den in Moodle angegebenen Github Classroom Invite Link. 
+## xv6 Quellcode von Github beziehen & Änderungen vornehmen
 
-Bitte beachten Sie das falls Sie auf Windows 10/11 sind, das die folgenden Schritte in dem Linux Subsystem zu befolgen sind. In diesem System wird das Praktikum durchgeführt.
+### Windows 10/11 & Mac : GitHub Desktop
+Für das clonen des Quellcodes und dem pushen von Änderungen empfehlen wir für Windows und Mac Systeme das verwenden von GitHub Desktop (https://desktop.github.com/download/).
 
-Clonen Sie nun das xv6 Betriebsystem von dem von Github-Classroom erzeugten Repository. Die URL dafür finden unter der grünen "Code" Fläche auf der Seite des Repositories. 
+Eine Anleitung, wie dieses Tool zu verwenden ist finden Sie hier: https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop
+
+### Linux: git 
+
+Falls ihr Hostsystem schon Linux ist kann man unbeschwerlich git nutzen.
+Clonen Sie hierfür das xv6 Betriebsystem von dem von Github-Classroom erzeugten Repository. Die URL dafür finden unter der grünen "Code" Fläche auf der Seite des Repositories. 
 
     git clone IhreRepoURLausGithub
 
