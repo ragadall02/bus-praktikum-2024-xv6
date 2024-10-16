@@ -46,6 +46,14 @@ Für das clonen des Quellcodes und dem pushen von Änderungen empfehlen wir für
 
 Eine Anleitung, wie dieses Tool zu verwenden ist finden Sie hier: https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop
 
+Das Tool ist in der Lage auf das Subsystem zuzugreifen. Clonen Sie den Quellcode am besten in den home folder unter:
+
+    \\wsl.localhost\Ubuntu\home\<IhrWSLNutzername>
+
+oder alternativ, falls darunter nicht zu erreichen:
+
+    %LOCALAPPDATA%\Packages\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\LocalState\rootfs\home
+
 ### Linux: git 
 
 Falls ihr Hostsystem schon Linux ist kann man unbeschwerlich git nutzen.
