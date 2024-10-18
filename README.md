@@ -1,24 +1,25 @@
 # Nutzung von xv6 für die Bearbeitung der Praktikumsaufgaben
-Um das Betriebssystem xv6 zu Nutzen müssen einige Vorbereitungen getroffen werden. 
+Um das Betriebssystem xv6 zu Nutzen müssen einige Vorbereitungen getroffen werden.
 Diese sind unterschiedlich je nach Betriebssystem.
 
 ## Setup für Windows 10/11
-1. Installieren sie das WSL (Windows Subsystem for Linux)
-    
+1. Installieren Sie das WSL (Windows Subsystem for Linux)
+
     1.1 Öffnen Sie die Konsole (cmd in Suchleiste)<br>
     1.2 Geben Sie "wsl --install" ein<br>
     1.3 Installieren lassen
 
-2. Geben Sie "wsl ~" in einem Terminal ein um das Linux Subsystem zu starten. Falls aus irgendeinem Grund keine Distribution vorhanden ist, installieren Sie Ubuntu durch die Eingabe von "wsl --install -d ubuntu" in der Konsole und geben Sie dann "wsl ~" ein. Sie sollten nun das Linux Subsystem in ihrer Konsole offen haben. 
+2. Geben Sie "wsl ~" in einem Terminal ein um das Linux Subsystem zu starten. Falls aus irgendeinem Grund keine Distribution vorhanden ist, installieren Sie Ubuntu durch die Eingabe von "wsl --install -d ubuntu" in der Konsole und geben Sie dann "wsl ~" ein. Sie sollten nun das Linux Subsystem in ihrer Konsole offen haben.
 
 3. Sie haben nun ein Linux System! Folgen Sie nun den Schritten in dem "Setup für Linux" um das System für die Nutzung von xv6 einzurichten.
 
 
 ### Troubleshooting für das Windows Setup
-Falls Sie einen "Schwerwiegenden Fehler" bei ihrer Installation von WSL haben, kann dies eine Reihe an Ursachen haben. Stellen Sie sicher das sie die Konsole als Administrator ausgeführt haben bzw. ihr Nutzer Admin Rechte hat.<br> 
+Falls Sie einen "Schwerwiegenden Fehler" bei ihrer Installation von WSL haben, kann dies eine Reihe an Ursachen haben. Stellen Sie sicher das sie die Konsole als Administrator ausgeführt haben bzw. ihr Nutzer Admin Rechte hat.
+
 Wenn es immer noch nicht geht, konsultieren Sie bitte diesen Thread:
 https://stackoverflow.com/questions/76405462/error-while-installing-the-wsl-in-window-10-by-running-wsl-install-in-powershe
-<br>
+
 Es kann sein das das "Windows Subsystem for Linux" erst auf ihrem System eingeschaltet werden muss, bevor sie das Installationskommando ausführen.
 
 ## Setup für Linux
@@ -26,18 +27,18 @@ Es kann sein das das "Windows Subsystem for Linux" erst auf ihrem System eingesc
 Geben Sie die folgenden Kommandos ein um das System für die Nutzung von xv6 einzurichten:
 
     sudo apt-get update
-    sudo apt-get install gcc-riscv64-linux-gnu
-    sudo apt-get install qemu-system-riscv64
-    sudo apt-get install -y build-essential git make gdb-multiarch
+    sudo apt-get install -y build-essential gcc-riscv64-linux-gnu qemu-system-riscv64 git make gdb-multiarch
 
 ## Setup für Mac M1
 
-    brew tap riscv/riscv
-    brew install riscv-tools
-    brew install riscv64-elf-gcc
-    brew install qemu
-    TOOLPREFIX=riscv64-elf- make qemu
+Installieren Sie folgende Tools mit [Homebrew](https://brew.sh/):
 
+    brew tap riscv/riscv
+    brew install riscv-tools riscv64-elf-gcc qemu
+
+Zum Ausführen von Xv6 müssen Sie eine zusätzliche Option benutzen:
+
+    TOOLPREFIX=riscv64-elf- make qemu
 
 ## xv6 Quellcode von Github beziehen & Änderungen vornehmen
 
@@ -54,10 +55,10 @@ oder alternativ, falls darunter nicht zu erreichen:
 
     %LOCALAPPDATA%\Packages\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\LocalState\rootfs\home
 
-### Linux: git 
+### Linux: git
 
 Falls ihr Hostsystem schon Linux ist kann man unbeschwerlich git nutzen.
-Clonen Sie hierfür das xv6 Betriebsystem von dem von Github-Classroom erzeugten Repository. Die URL dafür finden unter der grünen "Code" Fläche auf der Seite des Repositories. 
+Clonen Sie hierfür das xv6 Betriebsystem von dem von Github-Classroom erzeugten Repository. Die URL dafür finden unter der grünen "Code" Fläche auf der Seite des Repositories.
 
     git clone IhreRepoURLausGithub
 
